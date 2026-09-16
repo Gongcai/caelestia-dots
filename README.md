@@ -4,6 +4,8 @@ Personal Hyprland dotfiles for a Caelestia-only desktop, with a patched
 Hyprglass liquid-glass compositor effect and a custom `shotty` screenshot
 workflow.
 
+![Caelestia desktop preview](assets/desktop-preview.png)
+
 This repository contains the configuration layer around the shell fork. The
 shell source itself lives in the separate [caelestia-shell fork](https://github.com/Gongcai/caelestia-shell).
 The Hyprglass source patch is documented by that repository in
@@ -55,6 +57,16 @@ The Hyprland file intentionally does not declare monitor modes or EDID names.
 Add those in a local override after confirming the output names with
 `hyprctl monitors`.
 
+## Wallpaper
+
+The preview uses the included [`output.mp4`](assets/wallpaper/output.mp4)
+video wallpaper. Install it into the default wallpaper directory with:
+
+```sh
+mkdir -p ~/Pictures/Wallpapers
+cp assets/wallpaper/output.mp4 ~/Pictures/Wallpapers/output.mp4
+```
+
 ## Screenshot Tool
 
 `shotty` is not a system screenshot utility. It is the companion Rust project
@@ -85,10 +97,11 @@ only require the installed `shotty` command.
 
 ## Secrets and Local Overrides
 
-Never commit a populated `githubToken`, private keys, browser state, or actual
-wallpaper files. `caelestia/shell.example.json` contains empty GitHub fields
-and portable wallpaper/weather defaults. Put personal values in the ignored
-`~/.config/caelestia/shell.json` instead.
+Never commit a populated `githubToken`, private keys, browser state, or
+personal wallpaper files. The included `assets/wallpaper/output.mp4` is an
+intentional public example. `caelestia/shell.example.json` contains empty
+GitHub fields and portable wallpaper/weather defaults. Put personal values in
+the ignored `~/.config/caelestia/shell.json` instead.
 
 Generated DMS files, backup Hyprland configurations, compiled Hyprglass
 libraries and the compiled `shotty` binary are not dotfiles and are not stored
