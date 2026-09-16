@@ -93,7 +93,3 @@ The `oneshots` project is kept separate because it has its own source tree,
 Cargo lockfile and release cadence. The screenshot bindings in this repository
 only require the installed `shotty` command.
 
-
-Generated DMS files, backup Hyprland configurations, compiled Hyprglass
-libraries and the compiled `shotty` binary are not dotfiles and are not stored
-here.
