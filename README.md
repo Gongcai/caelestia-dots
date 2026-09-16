@@ -19,8 +19,6 @@ The Hyprglass source patch is documented by that repository in
 - Caelestia startup, clipboard and action helpers
 - Keybindings for the separately maintained `oneshots` / `shotty` project
 
-DMS is not part of this setup. The old shell-switch fallback and generated DMS
-configuration are intentionally excluded.
 
 ## Requirements
 
@@ -95,13 +93,6 @@ The `oneshots` project is kept separate because it has its own source tree,
 Cargo lockfile and release cadence. The screenshot bindings in this repository
 only require the installed `shotty` command.
 
-## Secrets and Local Overrides
-
-Never commit a populated `githubToken`, private keys, browser state, or
-personal wallpaper files. The included `assets/wallpaper/output.mp4` is an
-intentional public example. `caelestia/shell.example.json` contains empty
-GitHub fields and portable wallpaper/weather defaults. Put personal values in
-the ignored `~/.config/caelestia/shell.json` instead.
 
 Generated DMS files, backup Hyprland configurations, compiled Hyprglass
 libraries and the compiled `shotty` binary are not dotfiles and are not stored
