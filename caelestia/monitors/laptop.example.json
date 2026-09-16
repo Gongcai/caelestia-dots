@@ -1,0 +1,30 @@
+{
+    "background": {
+        "desktopCalendar": {
+            "enabled": false,
+            "offsetX": -1140,
+            "offsetY": 313
+        },
+        "desktopClock": {
+            "enabled": true,
+            "offsetX": -473,
+            "offsetY": -481,
+            "showSeconds": false,
+            "style": "digital"
+        },
+        "desktopGlass": {
+            "blur": false
+        },
+        "desktopMemory": {
+            "animate": false,
+            "background": {
+                "blur": true,
+                "enabled": true
+            },
+            "enabled": true,
+            "offsetX": 4,
+            "offsetY": -523
+        },
+        "wallpaperPath": "~/Pictures/Wallpapers/laptop.png"
+    }
+}

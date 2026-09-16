@@ -1,0 +1,158 @@
+{
+    "appearance": {
+        "blur": {
+            "enabled": true,
+            "passes": 4,
+            "size": 4,
+            "vibrancy": 0.1
+        },
+        "font": {
+            "body": {
+                "family": "苹方-简"
+            },
+            "clock": "苹方-简",
+            "headline": {
+                "family": "苹方-简"
+            },
+            "label": {
+                "family": "苹方-简"
+            },
+            "title": {
+                "family": "苹方-简"
+            },
+            "workspaces": "苹方-简"
+        },
+        "transparency": {
+            "base": 0.32,
+            "enabled": true,
+            "layers": 0.27
+        }
+    },
+    "background": {
+        "desktopClock": {
+            "background": {
+                "enabled": true
+            },
+            "enabled": true
+        },
+        "enabled": true,
+        "wallpaperEnabled": true
+    },
+    "bar": {
+        "activeWindow": {
+            "compact": false,
+            "inverted": true
+        },
+        "clock": {
+            "background": false,
+            "showDate": false
+        },
+        "dragThreshold": 25,
+        "persistent": true,
+        "showOnHover": false,
+        "statusIcons": [
+            {
+                "enabled": true,
+                "id": "lockStatus"
+            },
+            {
+                "enabled": false,
+                "id": "audio"
+            },
+            {
+                "enabled": false,
+                "id": "microphone"
+            },
+            {
+                "enabled": false,
+                "id": "kbLayout"
+            },
+            {
+                "enabled": true,
+                "id": "network"
+            },
+            {
+                "enabled": true,
+                "id": "bluetooth"
+            },
+            {
+                "enabled": true,
+                "id": "battery"
+            }
+        ],
+        "tray": {
+            "background": false,
+            "compact": true,
+            "recolour": true
+        },
+        "workspaces": {
+            "activeIndicator": true,
+            "activeTrail": false,
+            "occupiedBg": false,
+            "perMonitorWorkspaces": true,
+            "showWindows": true,
+            "showWindowsOnSpecialWorkspaces": true,
+            "shown": 5
+        }
+    },
+    "dashboard": {
+        "enabled": true,
+        "githubClientId": "",
+        "githubToken": "",
+        "githubUsername": "",
+        "performance": {
+            "showMemory": true
+        },
+        "showDashboard": true,
+        "showOnHover": false
+    },
+    "general": {
+        "apps": {
+            "explorer": [
+                "dolphin"
+            ],
+            "terminal": [
+                "kitty"
+            ]
+        },
+        "idle": {
+            "timeouts": [
+                {
+                    "idleAction": "lock",
+                    "timeout": 600
+                },
+                {
+                    "idleAction": "dpms off",
+                    "returnAction": "dpms on",
+                    "timeout": 900
+                }
+            ]
+        },
+        "language": "zh_CN"
+    },
+    "paths": {
+        "wallpaperDir": "~/Pictures/Wallpapers"
+    },
+    "services": {
+        "defaultPlayer": "Spotify",
+        "maxVolume": 1.5,
+        "playerAliases": [],
+        "weatherLocation": ""
+    },
+    "session": {
+        "commands": {
+            "hibernate": [
+                "suspendThenHibernate"
+            ]
+        },
+        "icons": {
+            "hibernate": "bedtime"
+        }
+    },
+    "sidebar": {
+        "dragThreshold": 80,
+        "enabled": true,
+        "minHoverThreshold": 220,
+        "showOnHover": false
+    }
+}

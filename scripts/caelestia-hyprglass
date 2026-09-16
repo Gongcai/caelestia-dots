@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -eu
+
+plugin_path="${HYPRGLASS_PLUGIN_PATH:-$HOME/.local/lib/hyprland/hyprglass.so}"
+
+if [ ! -r "$plugin_path" ]; then
+    echo "caelestia-hyprglass: plugin not found: $plugin_path" >&2
+    exit 1
+fi
+
+plugin_list=$(hyprctl plugin list 2>/dev/null) || {
+    echo "caelestia-hyprglass: cannot query Hyprland plugins" >&2
+    exit 1
+}
+
+if ! printf '%s\n' "$plugin_list" | grep -q 'Plugin hyprglass'; then
+    hyprctl plugin load "$plugin_path" || {
+        echo "caelestia-hyprglass: failed to load $plugin_path" >&2
+        exit 1
+    }
+fi
+
+hyprctl reload || {
+    echo "caelestia-hyprglass: Hyprland reload failed" >&2
+    exit 1
+}

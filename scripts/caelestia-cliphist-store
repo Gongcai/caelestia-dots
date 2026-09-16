@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+copy_marker="${XDG_CACHE_HOME:-$HOME/.cache}/caelestia/clipboard/copying"
+if [[ -r "$copy_marker" ]]; then
+    read -r owner_pid <"$copy_marker" || true
+    if [[ "$owner_pid" =~ ^[0-9]+$ ]] && kill -0 "$owner_pid" 2>/dev/null; then
+        cat >/dev/null
+        exit 0
+    fi
+
+    rm -f "$copy_marker"
+fi
+
+cliphist store
+qs -c caelestia ipc call clipboard reload >/dev/null 2>&1 || true

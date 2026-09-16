@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+action="${1:-}"
+
+run_caelestia() {
+    case "$action" in
+        launcher|launchpad|sidebar|dashboard|session)
+            caelestia shell drawers toggle "$action" >/dev/null
+            ;;
+        showall|nexus)
+            hyprctl dispatch "hl.dsp.global(\"caelestia:${action}\")" >/dev/null
+            ;;
+        *)
+            return 2
+            ;;
+    esac
+}
+
+if ! pgrep -f "^qs -c caelestia( |$)" >/dev/null; then
+    caelestia shell -d 9>&-
+    for _ in {1..20}; do
+        if pgrep -f "^qs -c caelestia( |$)" >/dev/null; then
+            break
+        fi
+        sleep 0.1
+    done
+fi
+
+if ! pgrep -f "^qs -c caelestia( |$)" >/dev/null; then
+    echo "caelestia-action: Caelestia did not start" >&2
+    exit 1
+fi
+
+run_caelestia

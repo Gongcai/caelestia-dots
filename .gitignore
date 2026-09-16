@@ -1,0 +1,17 @@
+build/
+.cache/
+.direnv/
+.envrc
+
+# Local configuration and generated overrides
+caelestia/shell.json
+caelestia/shell-tokens.json
+caelestia/monitors/*/shell.json
+hypr/dms/
+
+# Local editor and backup files
+.vscode/
+*.bak
+*.backup*
+*.old*
+*~

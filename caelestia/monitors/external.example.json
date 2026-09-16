@@ -1,0 +1,55 @@
+{
+    "background": {
+        "desktopCalendar": {
+            "enabled": true,
+            "offsetX": -1506,
+            "offsetY": 6
+        },
+        "desktopClock": {
+            "enabled": false,
+            "offsetX": -1515,
+            "offsetY": -415,
+            "style": "analog"
+        },
+        "desktopGlass": {
+            "blur": false
+        },
+        "desktopMemory": {
+            "enabled": false,
+            "offsetX": 147,
+            "offsetY": -377
+        },
+        "desktopMusic": {
+            "enabled": true,
+            "layout": "tall",
+            "offsetX": -721,
+            "offsetY": -227
+        },
+        "desktopTimer": {
+            "duration": 4550,
+            "enabled": true,
+            "offsetX": -1199,
+            "offsetY": -429,
+            "wide": false
+        },
+        "desktopVisualiser": {
+            "background": {
+                "blur": true,
+                "enabled": true
+            },
+            "enabled": false,
+            "offsetX": 766,
+            "offsetY": -877
+        },
+        "desktopWeather": {
+            "enabled": true,
+            "offsetX": 329,
+            "offsetY": 5
+        },
+        "desktopWorldClock": {
+            "enabled": false,
+            "style": "minimal"
+        },
+        "wallpaperPath": "~/Pictures/Wallpapers/external.mp4"
+    }
+}
