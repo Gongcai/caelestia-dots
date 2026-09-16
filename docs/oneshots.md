@@ -1,21 +1,20 @@
 # oneshots integration
 
 The Hyprland screenshot bindings call the `shotty` executable from the
-separate sibling project. During local development, keep that checkout at
-`../oneshots` next to this repository. Published installations should use the
-project's repository and a tagged release once a remote is available.
+separate [`oneshots`](https://github.com/Gongcai/oneshots) repository.
+Install the tagged release with Cargo:
 
-Current local reference:
+Current release reference:
 
 - tag: `v0.1.0`
-- commit: `3646cddbffece0b3cae579838508e67c366ba871`
+- commit: [`3646cddbffece0b3cae579838508e67c366ba871`](https://github.com/Gongcai/oneshots/commit/3646cddbffece0b3cae579838508e67c366ba871)
 - implementation: Rust, with `grim`/`hyprctl` capture and Tesseract OCR
 
 The dotfiles repository deliberately does not copy the compiled binary. Build
-the tool from its own checkout:
+the tool from the tagged repository release:
 
 ```sh
-cargo install --path ../oneshots --locked
+cargo install --git https://github.com/Gongcai/oneshots.git --tag v0.1.0 --locked
 ```
 
 The resulting `shotty` command must be available in the session `PATH` before

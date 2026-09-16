@@ -58,14 +58,14 @@ Add those in a local override after confirming the output names with
 ## Screenshot Tool
 
 `shotty` is not a system screenshot utility. It is the companion Rust project
-at `../oneshots`, currently tracking `v0.1.0` (`3646cdd`). It provides frozen
-region selection, window/screen capture, image clipboard output and selectable
-OCR for CJK text.
+[`oneshots`](https://github.com/Gongcai/oneshots), currently released as
+`v0.1.0` (`3646cdd`). It provides frozen region selection, window/screen
+capture, image clipboard output and selectable OCR for CJK text.
 
-Build it from the sibling checkout and put the binary on `PATH`:
+Install the tagged release and put the binary on `PATH`:
 
 ```sh
-cargo install --path ../oneshots --locked
+cargo install --git https://github.com/Gongcai/oneshots.git --tag v0.1.0 --locked
 ```
 
 The bindings are:
@@ -80,8 +80,8 @@ The bindings are:
 | `Super + Ctrl + Print` | Current window OCR preview |
 
 The `oneshots` project is kept separate because it has its own source tree,
-Cargo lockfile and release cadence. It needs a public remote and license
-before this repository can reference it as a reproducible Git dependency.
+Cargo lockfile and release cadence. The screenshot bindings in this repository
+only require the installed `shotty` command.
 
 ## Secrets and Local Overrides
 
